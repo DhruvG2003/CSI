@@ -1,0 +1,23 @@
+# Import necessary libraries
+import seaborn as sns
+import pandas as pd
+
+# Load the Iris dataset
+iris = sns.load_dataset('iris')
+
+# Display the first few rows of the dataset
+iris.head()
+
+import matplotlib.pyplot as plt
+
+# Scatter plot of sepal length vs sepal width
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=iris_sample, x='sepal_length', y='sepal_width', hue='species')
+plt.title('Sepal Length vs Sepal Width')
+plt.show()
+
+
+# Pair plot of the sample Iris dataset
+sns.pairplot(iris_sample, hue='species')
+plt.suptitle('Pair Plot of Iris Dataset', y=1.02)
+plt.show()
